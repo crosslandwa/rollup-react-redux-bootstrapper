@@ -13,6 +13,6 @@ describe('Count', () => {
     expect(currentCount()).toEqual(initial + 1)
 
     store.dispatch(decrementCount())
-    expect(currentCount()).toEqual(initial)
+    expect(currentCount()).toContain(initial)
   })
 })

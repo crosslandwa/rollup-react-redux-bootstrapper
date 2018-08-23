@@ -13,11 +13,11 @@ const mapDispatchToProps = dispatch => ({
 
 const App = props => (
   <div style={{
-      minWidth: 700,
-      width: '90vw',
-      fontFamily: 'sans-serif',
-      fontSize: '90%'
-    }}>
+    minWidth: 700,
+    width: '90vw',
+    fontFamily: 'sans-serif',
+    fontSize: '90%'
+  }}>
     <span>Your Rollup-React-Redux bootstrapped app goes here!</span>
     <div>
       Click count: {props.count}
