@@ -4,11 +4,18 @@ Quick start a [React](https://reactjs.org/)/[Redux](https://redux.js.org/introdu
 
 ## Application quick start
 
-To start your new application follow these steps:
+Assuming you have node and npm installed, bootstrap your new application by:
 ```bash
-# details to follow
+mkdir my-new-app
+curl -L https://github.com/crosslandwa/rollup-react-redux-bootstrap/tarball/master | tar -xf - --strip 1 --directory my-new-app
+cd my-new-app
+npm install
 ```
 
+Then ensure you
+- update the README (by default you'll get this one!)
+- change the app name in `dist/index.html`
+- change the name in `package.json`
 
 ## Application features
 
@@ -34,7 +41,7 @@ npm run test
 
 ### Linting
 
-Run linting against your code by
+Lint your code by
 ```bash
 npm run lint
 ```
@@ -49,4 +56,4 @@ Rollup is configured with the appropriate [Babel](https://babeljs.io/) plugins t
 
 - [redux-localstorage](https://github.com/elgerlambert/redux-localstorage) is configured out of the box to maintain your application state in your browsers local storage
 - CSS can be imported in your app via `import 'My.css'` - Rollup is configured to bundle CSS into your built JS artefact
-- [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension) extensions is configured out of the box
+- [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension) extension is configured out of the box (if you have it installed in your browser)
