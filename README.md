@@ -1,13 +1,13 @@
-# Rollup-React-Redux bootstrap
+# Rollup-React-Redux bootstrapper
 
 Quick start a [React](https://reactjs.org/)/[Redux](https://redux.js.org/introduction) application built with [Rollup](https://rollupjs.org/)
 
-## Application quick start
+## Bootstrap a new application
 
 Assuming you have node and npm installed, bootstrap your new application by:
 ```bash
 mkdir my-new-app
-curl -L https://github.com/crosslandwa/rollup-react-redux-bootstrap/tarball/master | tar -xf - --strip 1 --directory my-new-app
+curl -L https://github.com/crosslandwa/rollup-react-redux-bootstrapper/tarball/master | tar -xf - --strip 1 --directory my-new-app
 cd my-new-app
 npm install
 ```

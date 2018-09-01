@@ -1,7 +1,7 @@
 {
-  "name": "rollup-react-redux-bootstrap",
+  "name": "rollup-react-redux-bootstrapper",
   "version": "1.0.0",
-  "description": "A git exportable repository to get a fresh Rollup built React/Redux app started",
+  "description": "A git exportable repository for a fresh Rollup built React/Redux app",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",

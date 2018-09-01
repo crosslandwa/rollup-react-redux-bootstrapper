@@ -18,7 +18,7 @@ const App = props => (
     fontFamily: 'sans-serif',
     fontSize: '90%'
   }}>
-    <span>Your Rollup-React-Redux bootstrapped app goes here!</span>
+    <span>Your Rollup-React-Redux app goes here!</span>
     <div>
       Click count: {props.count}
     </div>
