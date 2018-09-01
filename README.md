@@ -36,7 +36,7 @@ The app can be run by opening `./dist/index.html` in your browser
 
 Tests are run with [Jest](https://facebook.github.io/jest/)
 ```bash
-npm run test
+npm test
 ```
 
 ### Linting
