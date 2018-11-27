@@ -16,7 +16,7 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     babel({
-      exclude: 'node_modules/**',
+      exclude: ['node_modules/**', '**/*.css'],
       plugins: ['external-helpers']
     }),
     resolve(),
