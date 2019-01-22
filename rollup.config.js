@@ -16,8 +16,10 @@ export default {
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
     babel({
+      babelrc: false,
       exclude: ['node_modules/**', '**/*.css'],
-      plugins: ['external-helpers']
+      plugins: ['external-helpers'],
+      presets: [['env', { modules: false }], 'react', 'stage-1']
     }),
     resolve(),
     commonjs({
