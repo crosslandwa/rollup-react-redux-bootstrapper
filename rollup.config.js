@@ -38,8 +38,8 @@ module.exports = {
         'node_modules/react-is/index.js': [
           'isContextConsumer',
           'isValidElementType'
-        ],
+        ]
       }
-    }),
+    })
   ]
 }
