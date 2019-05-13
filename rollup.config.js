@@ -14,10 +14,7 @@ module.exports = {
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    babel({
-      exclude: 'node_modules/**',
-      presets: [ '@babel/preset-env', '@babel/preset-react' ]
-    }),
+    babel(),
     resolve(),
     commonjs({
       include: 'node_modules/**',
