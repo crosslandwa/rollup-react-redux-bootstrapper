@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint",
   "plugins": [ "jest", "react" ],
   "parserOptions": {
     "ecmaFeatures": {
@@ -20,10 +21,6 @@
     "es6": true,
     "node": true,
     "jest": true
-  },
-  "globals": {
-    "XMLHttpRequest": true,
-    "FileReader": true
   },
   "extends": "standard"
 }

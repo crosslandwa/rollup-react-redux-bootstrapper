@@ -1,10 +1,10 @@
-import commonjs from 'rollup-plugin-commonjs'
 import babel from 'rollup-plugin-babel'
+import commonjs from 'rollup-plugin-commonjs'
+import postcss from 'rollup-plugin-postcss'
 import replace from 'rollup-plugin-replace'
 import resolve from 'rollup-plugin-node-resolve'
-import postcss from 'rollup-plugin-postcss'
 
-export default {
+module.exports = {
   input: 'src/main.js',
   output: {
     file: 'dist/bundle.min.js',
@@ -15,18 +15,31 @@ export default {
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    babel({
-      babelrc: false,
-      exclude: ['node_modules/**', '**/*.css'],
-      plugins: ['external-helpers'],
-      presets: [['env', { modules: false }], 'react', 'stage-1']
-    }),
+    babel(),
     resolve(),
     commonjs({
       include: 'node_modules/**',
       namedExports: {
-        'node_modules/react/index.js': ['Component', 'PureComponent', 'Fragment', 'Children', 'createElement'],
-        'node_modules/react-is/index.js': ['isValidElementType']
+        'node_modules/react/index.js': [
+          'Component',
+          'PureComponent',
+          'Fragment',
+          'Children',
+          'createElement',
+          'useContext',
+          'useEffect',
+          'useLayoutEffect',
+          'useMemo',
+          'useReducer',
+          'useRef'
+        ],
+        'node_modules/react-dom/index.js': [
+          'unstable_batchedUpdates'
+        ],
+        'node_modules/react-is/index.js': [
+          'isContextConsumer',
+          'isValidElementType'
+        ]
       }
     }),
     postcss({
