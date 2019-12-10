@@ -23,7 +23,7 @@ Then:
 ```bash
 npm run build
 # or
-npm run build -- --watch #automatically re-build whenever changes are made
+npm run watch #automatically re-build whenever changes are made
 ```
 
 ### Run
