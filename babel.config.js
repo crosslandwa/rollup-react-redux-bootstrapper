@@ -5,5 +5,6 @@
 
 module.exports = {
   exclude: 'node_modules/**',
-  presets: [['@babel/preset-env', { targets: { node: 10 } }], '@babel/preset-react']
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+  plugins: [['@babel/transform-runtime', { 'regenerator': true }]]
 }

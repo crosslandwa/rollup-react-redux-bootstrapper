@@ -15,7 +15,7 @@ module.exports = {
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    babel(),
+    babel({ runtimeHelpers: true }),
     resolve(),
     commonjs({
       include: 'node_modules/**',
