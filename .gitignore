@@ -1,4 +1,5 @@
 dist/bundle*
+.DS_Store
 
 # Logs
 logs
