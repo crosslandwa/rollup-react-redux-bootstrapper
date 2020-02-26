@@ -4,9 +4,11 @@ Quick start a [React](https://reactjs.org/)/[Redux](https://redux.js.org/introdu
 
 Assuming you have node and npm installed:
 ```bash
-mkdir my-new-app
-curl -L https://github.com/crosslandwa/rollup-react-redux-bootstrapper/tarball/master | tar -xf - --strip 1 --directory my-new-app
-cd my-new-app
+APP=my-new-app
+mkdir $APP
+curl -L https://github.com/crosslandwa/rollup-react-redux-bootstrapper/tarball/master | tar -xf - --strip 1 --directory $APP
+cd $APP
+unset APP
 npm install
 ```
 
