@@ -22,7 +22,7 @@ module.exports = {
     resolve(),
     commonjs(),
     postcss({
-      extensions: [ '.css' ]
+      extensions: ['.css']
     })
   ]
 }
