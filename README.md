@@ -9,13 +9,13 @@ mkdir $APP
 curl -L https://github.com/crosslandwa/rollup-react-redux-bootstrapper/tarball/master | tar -xf - --strip 1 --directory $APP
 cd $APP
 unset APP
-npm install
+npm ci
 ```
 
 Then:
 - update the `README.md` (by default you'll get this one!)
-- change the `<title>` in `dist/index.html`
-- change the `"name"` in `package.json`
+- change the `<title>` tag in the HTML template in `rollup.config.js`
+- change the `"name"` and `"description"` fields in `package.json`
 - start writing your app - the entry point is `src/main.js`
 
 ## Application features
@@ -30,7 +30,7 @@ npm run watch #automatically re-build whenever changes are made
 
 ### Run
 
-Open `dist/index.html` in your browser
+Open `dist/index.html` in your browser (you'll need to have built the code to generate this file)
 
 ### Tests
 
