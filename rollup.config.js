@@ -1,8 +1,8 @@
-import babel from 'rollup-plugin-babel'
-import commonjs from 'rollup-plugin-commonjs'
+import babel from '@rollup/plugin-babel'
+import commonjs from '@rollup/plugin-commonjs'
 import postcss from 'rollup-plugin-postcss'
-import replace from 'rollup-plugin-replace'
-import resolve from 'rollup-plugin-node-resolve'
+import replace from '@rollup/plugin-replace'
+import resolve from '@rollup/plugin-node-resolve'
 
 module.exports = {
   input: 'src/main.js',
@@ -15,33 +15,12 @@ module.exports = {
     replace({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
-    babel({ runtimeHelpers: true }),
-    resolve(),
-    commonjs({
-      include: 'node_modules/**',
-      namedExports: {
-        'node_modules/react/index.js': [
-          'Component',
-          'PureComponent',
-          'Fragment',
-          'Children',
-          'createElement',
-          'useContext',
-          'useEffect',
-          'useLayoutEffect',
-          'useMemo',
-          'useReducer',
-          'useRef'
-        ],
-        'node_modules/react-dom/index.js': [
-          'unstable_batchedUpdates'
-        ],
-        'node_modules/react-is/index.js': [
-          'isContextConsumer',
-          'isValidElementType'
-        ]
-      }
+    babel({
+      babelHelpers: 'runtime',
+      skipPreflightCheck: true // this is needed to prevent a rollup/babel config issue where the addition of plugin-transform-runtime as a plugin in babel.config.js is ignored by rollup
     }),
+    resolve(),
+    commonjs(),
     postcss({
       extensions: [ '.css' ]
     })

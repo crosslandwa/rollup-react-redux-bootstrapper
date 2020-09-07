@@ -56,3 +56,4 @@ Rollup is configured with the appropriate [Babel](https://babeljs.io/) plugins t
 - [redux-localstorage](https://github.com/elgerlambert/redux-localstorage) is configured out of the box to maintain application state in the browsers local storage
 - CSS can be imported in the app via `import 'My.css'` - Rollup is configured to bundle CSS into the built JS artefact
 - [Redux DevTools](https://github.com/zalmoxisus/redux-devtools-extension) extension is configured out of the box (requires dev tools be installed in the browser)
+- [Babel runtime](https://babeljs.io/docs/en/babel-runtime) is included to support transpilation of `async / await` code for ES5 targets
